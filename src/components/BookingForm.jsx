@@ -19,7 +19,7 @@ const BookingForm = ({availableTimes = [], dispatch, submitForm }) => {
     <header>
       <section>
         <form onSubmit={handleSubmit}>
-          <fieldset>
+          <fieldset className="booking-form">
             <div>
               <label htmlFor="book-date">Choose Date</label>
               <input
@@ -63,14 +63,16 @@ const BookingForm = ({availableTimes = [], dispatch, submitForm }) => {
                 onChange={(e) => setOccassion(e.target.value)}
               >
                 <option>Birthday</option>
+                <option>Family Gathering</option>
                 <option>Anniversary</option>
+                <option>Friends Party</option>
               </select>
             </div>
             <div className="btnReceive">
               <input
                 aria-label="On Click"
                 type="submit"
-                value={"Make Your Reservation"}
+                value={"Confirm Reservation"}
               />
             </div>
           </fieldset>
